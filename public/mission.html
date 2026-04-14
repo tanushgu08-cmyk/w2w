@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Our Mission</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<img src="logo.png" alt="WasteToWealth Logo">
+</div>
+
+<nav>
+<ul class="menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+<a href="#">About ▼</a>
+
+<ul class="dropdown-menu">
+
+<li><a href="about.html">About This Program</a></li>
+<li><a href="mission.html">Our Mission</a></li>
+<li><a href="vision.html">Our Vision</a></li>
+<li><a href="howworks.html">How It Works</a></li>
+<li><a href="impact.html">Our Impact</a></li>
+<li><a href="join.html">Join The Movement</a></li>
+
+</ul>
+</li>
+
+<li><a href="#overview">Overview</a></li>
+<li><a href="#leaderboard">Leaderboard</a></li>
+<li><a href="#impact-section">Impact</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+</nav>
+
+<div class="login">
+
+<button onclick="window.open('donor.html','_blank')">
+Donor Login
+</button>
+
+<button onclick="window.open('volunteer.html','_blank')">
+Volunteer Login
+</button>
+
+</div>
+
+</header>
+<section style="padding:40px">
+
+<h1>Our Mission</h1>
+
+<p>
+WasteToWealth is driven by a simple yet powerful mission: to reduce waste and ensure that surplus resources reach the people who need them the most. Every day, restaurants, hostels, and households discard large quantities of food and useful items, while many individuals and families struggle to meet their basic needs.
+
+Our mission is to build a reliable digital platform that connects donors with NGOs, shelters, and communities in need. By making the donation process easy and accessible, we encourage people and organizations to contribute their surplus resources instead of letting them go to waste. Through collaboration, technology, and community support, WasteToWealth aims to transform excess into opportunity and create a more compassionate society.
+
+
+
+
+</p>
+
+<h2>NGO Locations</h2>
+<div id="map" style="height: 400px;"></div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Volunteer Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<form class="register-box" id="volunteerForm">
+
+    <h2>Volunteer Registration</h2>
+
+    <input type="text" id="volName" name="name" placeholder="Full Name" required>
+
+    <input type="tel" id="volPhone" name="phone" placeholder="Phone Number" required>
+
+    <input type="text" id="volAddress" name="location" placeholder="Address" required>
+
+    <label>Select ID Type</label>
+
+    <select id="idType" name="id_type" required>
+        <option value="">Select ID Type</option>
+        <option value="Aadhar Card">Aadhar Card</option>
+        <option value="Driving License">Driving License</option>
+        <option value="PAN Card">PAN Card</option>
+    </select>
+
+    <input type="text" id="idNumber" name="id_number" placeholder="ID Proof Number" required>
+
+    <label>Upload your ID Proof</label>
+    <input type="file" id="idPhoto" name="id_photo">
+
+    <button type="submit">Register</button>
+
+</form>
+
+<!-- 🚚 AVAILABLE DELIVERIES -->
+<div id="deliverySection" style="padding:30px;">
+    <h2>Available Deliveries</h2>
+    <div id="deliveryList"></div>
+</div>
+
+<!-- 🗺️ MAP -->
+<div id="locationError" class="error-message" style="color:red; padding:10px 0;"></div>
+<div id="map" style="height:400px; margin-top:20px;"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

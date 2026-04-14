@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WasteToWealth</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+<!-- ===== WELCOME POPUP ===== -->
+<div id="welcomePopup" class="popup">
+    <div class="popup-content">
+        <!-- Close button -->
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+
+        <h2>Welcome to WasteToWealth 🌱</h2>
+        <p>Turning Surplus Resources Into Community Support</p>
+    </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar">
+
+<div class="logo">
+<img src="logo.png" alt="WasteToWealth Logo">
+</div>
+
+<nav>
+<ul class="menu">
+
+<li><a href="index.html">Home</a></li>
+
+<li class="dropdown">
+<a href="#">About ▼</a>
+
+<ul class="dropdown-menu">
+
+<li><a href="about.html">About This Program</a></li>
+<li><a href="mission.html">Our Mission</a></li>
+<li><a href="vision.html">Our Vision</a></li>
+<li><a href="howworks.html">How It Works</a></li>
+<li><a href="impact.html">Our Impact</a></li>
+<li><a href="join.html">Join The Movement</a></li>
+
+</ul>
+</li>
+
+<li><a href="#overview">Overview</a></li>
+<li><a href="#" onclick="showSection('leaderboardSection')">Leaderboard</a></li>
+<li><a href="impact.html">Impact</a></li>
+<li><a href="records.html">Records</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#" onclick="showSection('mapSection')">Live Map</a></li>
+</ul>
+</nav>
+
+<!-- 🔔 Notification Bell -->
+<div class="notification" onclick="toggleNotifications()">
+  🔔
+  <span id="notifCount" class="notif-count">0</span>
+</div>
+
+<div class="login">
+    
+<button onclick="adminLogout()">Logout</button>
+
+<button onclick="window.open('emergency.html','_blank')">
+Emergency
+</button>
+
+<button onclick="window.open('donor.html','_blank')">
+Donor Login
+</button>
+
+<button onclick="window.open('volunteer.html','_blank')">
+Volunteer Login
+</button>
+
+</div>
+</header>
+
+<!-- 🔔 Notification Panel -->
+<div id="notifPanel" class="notif-panel">
+  <h3>Pending Requests</h3>
+
+  <div id="pendingDonors"></div>
+  <div id="pendingVolunteers"></div>
+
+</div>
+
+<!-- ===== HERO SECTION ===== -->
+<section id="home" class="hero">
+    <h1>Turn Waste Into Hope</h1>
+    <p>Reducing waste • Feeding communities • Building impact</p>
+
+</section>
+
+<!-- ===== FEATURES SECTION ===== -->
+<section class="features">
+
+<div class="feature-box">
+<h3>🍱 Donate Food</h3>
+<p>Restaurants and households can donate surplus food.</p>
+</div>
+
+<div class="feature-box">
+<h3>🚚 Volunteer Pickup</h3>
+<p>Volunteers collect and deliver food to people in need.</p>
+</div>
+
+<div class="feature-box">
+<h3>🤝 Help Communities</h3>
+<p>Resources reach NGOs and underprivileged communities.</p>
+</div>
+</section>
+
+<!--== For showing Button only after login -->
+<div class="user-actions">
+
+<button id="pickupBtn" style="display:none;">
+Pickup & Deliver
+</button>
+
+</div>
+
+
+<!-- Daily campaign stats -->
+<section class="live-stats">
+
+<div class="stat-box">
+<h2 id="totalMealsStat">0+</h2>
+<p>Meals Served</p>
+</div>
+
+<div class="stat-box">
+<h2 id="foodSavedStat">0kg</h2>
+<p>Food Saved</p>
+</div>
+
+<div class="stat-box">
+<h2 id="volunteerStat">0</h2>
+<p>Number of Volunteers in this Campaign</p>
+</div>
+
+</section>
+
+<!-- 🏆 LEADERBOARD SECTION -->
+<section id="leaderboardSection" style="display: none;">
+  <h2 class="leaderboard-title">🏆 Top Volunteers</h2>
+  <div id="leaderboard" class="leaderboard-container"></div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="contact">
+    <p>Contact: wastetowealth@gmail.com</p>
+    <p>Follow us: Instagram | LinkedIn | Twitter</p>
+    <p>Terms & Conditions</p>
+</footer>
+<!--AUDIO ELEMENT FOR NOTIFICATIONS -->
+<audio id="notifSound" src="notification.mp3" preload="auto"></audio>
+
+<!-- 🌍 LEAFLET CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<!-- 🌍 MAP BOX -->
+<section id="mapSection" style="display:none;">
+    <div id="map" style="height:400px; margin-top:20px;"></div>
+</section>
+<!-- 🌍 LEAFLET JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- ✅ Supabase FIRST -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- ✅ Then your JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

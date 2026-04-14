@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+
+<body>
+
+<h2>Pending Donors</h2>
+<div id="donorList"></div>
+
+<h2>Pending Volunteers</h2>
+<div id="volunteerList"></div>
+
+<h2>Admin Login</h2>
+
+<input type="email" id="adminEmail" placeholder="Enter Email">
+<input type="password" id="adminPass" placeholder="Enter Password">
+
+<button onclick="adminLogin()">Login</button>
+
+<!-- ✅ IMPORTANT SCRIPTS (DON’T CHANGE ORDER) -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

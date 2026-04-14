@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Records</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="WasteToWealth Logo">
+    </div>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#">About ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="about.html">About This Program</a></li>
+                    <li><a href="mission.html">Our Mission</a></li>
+                    <li><a href="vision.html">Our Vision</a></li>
+                    <li><a href="howworks.html">How It Works</a></li>
+                    <li><a href="impact.html">Our Impact</a></li>
+                    <li><a href="join.html">Join The Movement</a></li>
+                </ul>
+            </li>
+
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="login">
+        <button onclick="window.open('donor.html','_blank')">Donor Login</button>
+        <button onclick="window.open('volunteer.html','_blank')">Volunteer Login</button>
+    </div>
+</header>
+
+<section class="records-page">
+    <h1>Registered Records</h1>
+    <p>All donor and volunteer records are shown below.</p>
+
+    <div class="impact-data-container">
+        <div class="impact-data-box">
+            <h2>Registered Donors</h2>
+            <div id="donorList">Loading donors...</div>
+        </div>
+
+        <div class="impact-data-box">
+            <h2>Registered Volunteers</h2>
+            <div id="volunteerList">Loading volunteers...</div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

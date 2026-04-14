@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emergency Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form class="register-box" id="emergencyForm">
+    <h2>Emergency Request</h2>
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="location" placeholder="Location" required>
+    <input type="text" name="need_type" placeholder="What do you need? (Food / Water / Help)" required>
+    <textarea name="message" placeholder="Describe the emergency" required style="width:90%; padding:10px; margin:10px 0; border-radius:5px;"></textarea>
+
+    <button type="submit">Submit Emergency</button>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

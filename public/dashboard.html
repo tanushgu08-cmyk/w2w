@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Food Map</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar header shared with index -->
+    <header class="navbar">
+        <div class="Logo">
+            <img src="Logo.png" alt="WasteToWealth Logo 🌱">
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#overview">Overview</a>
+            <a href="index.html#leaderboard">Leaderboard</a>
+            <a href="index.html#impact">Impact</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="login">
+            <button onclick="donorLogin()">Donor Login</button>
+            <button onclick="volunteerLogin()">Volunteer Login</button>
+        </div>
+    </header>
+
+    <h1>Live Food Availability</h1>
+    <h2>Platform Impact</h2>
+
+<div id="stats"></div>
+    <div id="foodList"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

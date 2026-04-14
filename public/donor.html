@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Donor Registration</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+<form class="register-box" id="donorForm">
+
+<h2>Donor Registration</h2>
+
+<select id="donorType" name="donorType">
+
+<option value="">Select Donor Type</option>
+<option value="restaurant">Restaurant</option>
+<option value="hostel">Hostel</option>
+<option value="household">Household</option>
+
+</select>
+
+<input type="text" name="ownerName" placeholder="Owner Name" required>
+
+<input type="text" name="businessName" placeholder="Restaurant / Hostel Name" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<input type="text" name="address" placeholder="Address" required>
+
+<div id="ratingWrapper" style="display:none;">
+    <label>Restaurant Rating</label>
+    <div id="ratingStars" class="rating-stars">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+    </div>
+
+    <input type="hidden" id="rating" name="rating">
+</div>
+
+<label>Upload Photo of Restaurant / Hostel</label>
+
+<input type="file" name="photo">
+
+<button type="submit">Register</button>
+
+</form>
+
+<!-- 🍱 FOOD DONATION FORM -->
+<form class="register-box" id="foodForm" style="display:none;">
+
+    <h2>Donate Food Details</h2>
+
+    <input type="number" name="quantity" placeholder="Quantity of Food (plates)" required>
+
+    <select name="food_type" required>
+        <option value="">Select Food Type</option>
+        <option value="Veg">Veg</option>
+        <option value="Non-Veg">Non-Veg</option>
+    </select>
+
+    <input type="datetime-local" name="delivery_time" required>
+
+    <button type="submit">Submit Food Donation</button>
+
+</form>
+
+<div id="locationError" class="error-message" style="color:red; padding:10px 0;"></div>
+<div id="map" style="height: 350px; margin-top: 20px;"></div>
+
+<!-- Supabase library FIRST -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- Then your script -->
+<script src="script.js"></script>
+
+</body>
+</html>

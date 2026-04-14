@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Impact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="WasteToWealth Logo">
+    </div>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#">About ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="about.html">About This Program</a></li>
+                    <li><a href="mission.html">Our Mission</a></li>
+                    <li><a href="vision.html">Our Vision</a></li>
+                    <li><a href="howworks.html">How It Works</a></li>
+                    <li><a href="impact.html">Our Impact</a></li>
+                    <li><a href="join.html">Join The Movement</a></li>
+                </ul>
+            </li>
+
+            <li><a href="impact.html">Impact</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="login">
+        <button onclick="window.open('donor.html','_blank')">Donor Login</button>
+        <button onclick="window.open('volunteer.html','_blank')">Volunteer Login</button>
+    </div>
+</header>
+
+<section class="impact-page">
+    <h1>Our Impact</h1>
+    <p>See the contribution and growth of WasteToWealth.</p>
+
+    <div class="impact-container">
+        <div class="impact-box">
+            <h3 id="todayMeals">0</h3>
+            <p>Meals Saved Today</p>
+        </div>
+
+        <div class="impact-box">
+            <h3 id="totalResources">0</h3>
+            <p>Total Resources Donated</p>
+        </div>
+
+        <div class="impact-box">
+            <h3 id="restaurantsConnected">0</h3>
+            <p>Restaurants Connected</p>
+        </div>
+    </div>
+</section>
+
+<footer id="contact">
+    <p>Contact: wastetowealth@gmail.com</p>
+    <p>Follow us: Instagram | LinkedIn | Twitter</p>
+    <p>Terms & Conditions</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
