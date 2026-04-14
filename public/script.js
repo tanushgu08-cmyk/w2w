@@ -195,6 +195,13 @@ if (donorForm) {
     donorForm.addEventListener("submit", async function (e) {
         e.preventDefault();
 
+        const termsChecked = document.getElementById("donorTerms");
+
+if (!termsChecked || !termsChecked.checked) {
+    alert("Please accept Terms & Conditions ❗");
+    return;
+}
+
         const formData = new FormData(donorForm);
         const rawData = Object.fromEntries(formData.entries());
 
@@ -318,6 +325,13 @@ const volunteerForm = document.getElementById("volunteerForm");
 if (volunteerForm) {
     volunteerForm.addEventListener("submit", async function (e) {
         e.preventDefault();
+
+        const termsChecked = document.getElementById("volunteerTerms");
+
+if (!termsChecked || !termsChecked.checked) {
+    alert("Please accept Terms & Conditions ❗");
+    return;
+}
 
         const formData = new FormData(volunteerForm);
 
